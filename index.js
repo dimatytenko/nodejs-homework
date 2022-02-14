@@ -1,10 +1,16 @@
 const { Command } = require("commander");
 const {
   listContacts,
-  addContact,
   getContactById,
+  addContact,
   removeContact,
-} = require("./contacts.js");
+} = require("./controllers/contacts");
+// const {
+//   listContacts,
+//   addContact,
+//   getContactById,
+//   removeContact,
+// } = require("./contacts.js");
 
 const program = new Command();
 program
@@ -58,5 +64,6 @@ async function invokeAction({
       console.warn("\x1B[31m Unknown action type!");
   }
 }
-
-invokeAction(argv);
+(async () => {
+  await invokeAction(argv);
+})();
