@@ -5,12 +5,6 @@ const {
   addContact,
   removeContact,
 } = require("./controllers/contacts");
-// const {
-//   listContacts,
-//   addContact,
-//   getContactById,
-//   removeContact,
-// } = require("./contacts.js");
 
 const program = new Command();
 program
